@@ -12,6 +12,9 @@ var screenName = {screen_name: 'whutturfacts'};
 
 twitter.get("statuses/user_timeline", screenName, function(error, tweets, response) {
     if (!error) {
-    console.log(JSON.stringify(tweets, null, 2)); //tweet body
+        for(var i = 0; i < 20; i++) {
+        console.log("@whutturfacts: " +(JSON.stringify(tweets[i].text, null, 2))); //tweet text
+        console.log("tweeted on " +(JSON.stringify(tweets[i].created_at, null, 2)) + "\n"); //tweet created at
+        }
     }
 });
