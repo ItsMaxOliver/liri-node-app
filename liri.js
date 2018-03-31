@@ -24,12 +24,16 @@ switch (command) {
             }
         });
     break;
+        
     case 'spotify-this-song':
         
     break;
+        
     case 'movie-this':
-        request("http://www.omdbapi.com/?t=" + input + "&r=json&plot=short&apikey=trilogy")
-        .then(response => {
+        if (input) {
+            request("http://www.omdbapi.com/?t=" + input + "&r=json&plot=short&apikey=trilogy")
+            
+            .then(response => {
             let data = JSON.parse(response);
             console.log("Title: " + data.Title);
             console.log("Year: " + data.Year);
@@ -39,8 +43,25 @@ switch (command) {
             console.log("Language: " + data.Language);
             console.log("Plot: " + data.Plot);
             console.log("Actors: " + data.Actors);
-        })
+            })
+        }
+        else {
+            request("http://www.omdbapi.com/?t=Mr. Nobody&r=json&plot=short&apikey=trilogy")
+            
+            .then(response => {
+            let data = JSON.parse(response);
+            console.log("Title: " + data.Title);
+            console.log("Year: " + data.Year);
+            console.log("IMDB Rating: " + data.imdbRating);
+            console.log("Rotten Tomatoes Rating: " + data.Ratings[1].Value);
+            console.log("Country of Production: " + data.Country);
+            console.log("Language: " + data.Language);
+            console.log("Plot: " + data.Plot);
+            console.log("Actors: " + data.Actors);
+            })
+        }
     break;
+        
     case 'do-what-it-says':
         fs.readFile("random.txt", function(err, data){
         if (err) {
