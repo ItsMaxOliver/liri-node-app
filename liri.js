@@ -26,7 +26,17 @@ switch (command) {
     break;
         
     case 'spotify-this-song':
-        
+        spotify.search({type: "track", query: input, limit: 1}, function(err, info) {
+            if (!err) {
+            //console.log(info.tracks.items.artists.name);
+            console.log(input);
+            //console.log(info.tracks.items.preview_url);
+            //console.log(info.tracks.items.album.name);
+            }
+            else{
+                console.log(err);
+            }
+        });
     break;
         
     case 'movie-this':
@@ -59,7 +69,7 @@ switch (command) {
             console.log("Plot: " + data.Plot);
             console.log("Actors: " + data.Actors);
             })
-        }
+        };
     break;
         
     case 'do-what-it-says':
@@ -68,6 +78,6 @@ switch (command) {
             return console.log(err);
         }
         // working code here
-    })
+    });
     break;
 }
