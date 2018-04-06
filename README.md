@@ -3,10 +3,12 @@
 LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
 LIRI will recognize four different commands: 
-    my-tweets
-    spotify-this-song
-    movie-this
-    do-what-it-says
+<ul>
+    <li>my-tweets</li>
+    <li>spotify-this-song</li>
+    <li>movie-this</li>
+    <li>do-what-it-says</li>
+</ul>
 
 When the <b>my-tweets</b> command is given the 20 latest tweets from Chrissy Teigen will be shown with their date and time created.
 
