@@ -19,7 +19,7 @@ When the <b>spotify-this-song</b> command is given the artist, the song title, t
 
 When the <b>movie-this</b> command is given the title, year, imdb rating, rotten tomatoes rating, country of production, language, plot and actors will be shown for the specified movie. If no movie is specified then information for the Marvel movie 'Black Panther' will be shown.
 
-    An example for what the command looks like when you specify a song is:
+    An example for what the command looks like when you specify a movie is:
             node liri movie-this "Black Panther"
             
     The movie title needs to be in quotes to work properly.
