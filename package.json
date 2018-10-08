@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MollyLJohnson/liri-node-app#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "cryptiles": "^4.1.2",
     "dotenv": "^5.0.1",
     "fs": "0.0.1-security",
     "fs-extra": "^5.0.0",
